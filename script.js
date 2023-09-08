@@ -50,11 +50,11 @@ cardNumberValidate = (e) => {
     target.focus();
   }
   if (firstDigit == 4) {
-    cardLogo.setAttribute("src", "/images/Visa.svg");
+    cardLogo.setAttribute("src", "./images/Visa.svg");
   } else if (firstDigit == 2 || firstDigit == 5) {
-    cardLogo.setAttribute("src", "/images/Mastercard.svg");
+    cardLogo.setAttribute("src", "./images/Mastercard.svg");
   } else if (firstDigit == 3) {
-    cardLogo.setAttribute("src", "/images/American_Express.svg");
+    cardLogo.setAttribute("src", ".git status/images/American_Express.svg");
   } else {
     cardLogo.setAttribute("src", "");
   }
