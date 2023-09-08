@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment by Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="chip-logo">
+        <img src="images/Chip.png" alt="chip" id="chip" />
+        <img src="" alt="" id="card-logo" />
+      </div>
+      <div class="card-details">
+        <div class="card-holder-title">
+          <p>Card holder</p>
+          <p id="card-holder"></p>
+        </div>
+        <div class="expires">
+          <p>Expires</p>
+          <p>
+            <span id="expiration-month"></span>&nbsp;<span
+              id="expiration-year"
+            ></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-details">
+      <form id="validateForm" action="/">
+        <div class="card-number-details">
+          <label for="card-number">Card number</label>
+          <div id="card-number">
+            <input type="text" id="num1" class="chc" maxlength="4" required/>
+            <input type="text" id="num2" class="chc" maxlength="4" required/>
+            <input type="text" id="num3" class="chc" maxlength="4" required/>
+            <input type="text" id="num4" class="chc" maxlength="4" required/>
+          </div>
+        </div>
+        <div class="card-holder-details">
+          <label for="card-name">Card holder</label>
+          <input type="text" name="" id="card-name" class="chc" required />
+        </div>
+        <div class="exp-cvv">
+          <div class="exp-date">
+            <label for="exp-date">Expiration date</label>
+            <div class="month-year">
+              <select name="month" id="exp-month" class="chc" required>
+                <option value="" selected disabled>Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+              </select>
+              <select name="year" id="exp-year" class="chc" required>
+                <option value="" selected disabled>Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+              </select>
+            </div>
+          </div>
+          <div class="cvv">
+            <label for="cvv">CVV</label>
+            <input type="text" name="cvv" id="cvv" class="chc" required/>
+          </div>
+        </div>
+        <input type="submit" value="submit" id="submit">
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+:root {
+    --white: #fff;
+    --hash: #ddd;
+    --grey: #444;
+    --lin-grad: linear-gradient(to right, #185a9d, #437fce, #43b0ce, #43cea2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* > label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--grey);
+    display: block;
+    margin-bottom: 5px;
+}
+
+* > p {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 12px;
+}
+
+* > input {
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+* > input:focus {
+    border: 1px solid #43cea2;
+    outline: none;
+}
+
+* > input:hover {
+    border: 1px solid #43b0ce;
+}
+
+body {
+    background-color: var(--hash);
+}
+
+.card {
+    top: 10%;
+    background-image: var(--lin-grad);
+    width: 30%;
+    height: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    left: 35%;
+}
+
+.chip-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chip {
+    width: 15%;
+    border-radius: 10px;
+}
+
+#card-logo {
+    width: 25%;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+#card-holder, #expiration-month, #expiration-year {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.payment-details {
+    background-color: var(--white);
+    width: 35%;
+    padding: 150px 2.5% 10px;
+    z-index: 1;
+    position: absolute;
+    left: 32.5%;
+    top: 30%;
+    border-radius: 15px;
+}
+
+.card-number-details input {
+    width: 22%;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.card-holder-details input {
+    width: 95%;
+}
+
+.exp-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.month-year select {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.month-year select:focus {
+    border: 1px solid #43cea2;
+    outline: none;
+}
+
+.month-year select:hover {
+    border: 1px solid #43b0ce;
+}
+.cvv input {
+    width: 50%;
+}
+
+#submit {
+    width: 95%;
+    padding: 10px;
+    background-color: #437fce;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media screen and ( max-width:900px) {
+    .card {
+        width: 45%;
+        left: 27.5%;
+        top: 5%;
+    }
+
+    .card-details {
+        margin-top: 60px;
+    }
+
+    .payment-details {
+        width: 50%;
+        left: 25%;
+        top: 25%;
+    }
+
+    #submit {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 60%;
+        left: 20%;
+        top: 5%;
+    }
+
+    .card-details {
+        margin-top: 60px;
+    }
+
+    .payment-details {
+        width: 65%;
+        left: 17.5%;
+        top: 25%;
+        padding: 150px 2.5% 20px;
+    }
+}
